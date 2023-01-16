@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+</head>
+<body>
+<h1>Hello</h1>
+<h2>Before format {{.Times}}</h2>
+<h2>after format {{FormatTime .Times}}</h2>
+<ul>
+{{/*Commenting in go*/}}
+{{range .Humans}}
+{{if and .Name .View}}{{/*if .Name not null and .View true*/}}
+<li>{{UpperCase .Name}}: {{.Hobby | FT | UpperCase}} ({{.Ages}} years).</li>
+{{else}}
+Ages {{.Ages}} - {{.DoubleAges}} - {{.DoubleAges|.TripleAges}}
+{{end}}
+{{end}}
+
+{{range .Cars}}
+<li>{{UpperCase .Brand}}: {{.Name | FT | UpperCase}} ({{.Year}}).</li>
+{{end}}
+
+</ul>
+{{template "Predifinetemplate".}}
+
+
+</body>
+</html>

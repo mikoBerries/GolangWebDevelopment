@@ -1,0 +1,31 @@
+{{define "Predifinetemplate"}}
+Predifine function index [0]human [2]cars
+{{index .Humans 0}}
+{{index .Cars 2}}
+
+Predifine function in template if and or 
+<h1>Score Comparation Score1 :10 | Score2:100</h1>
+
+
+Predifine function in template > < == etc
+<h1>Score Comparation Score1 :10 | Score2:100</h1>
+Score1 > Score2 : 
+{{if gt .Score1 .Score2}}
+    YES
+    {{else}}
+    NO
+{{end}}
+Score1 < Score2 : 
+{{if lt .Score1 .Score2}}
+    YES
+    {{else}}
+    NO
+{{end}}
+Score1 == Score2 : 
+{{if eq .Score1 .Score2}}
+    YES
+    {{else}}
+    NO
+{{end}}
+
+{{end}}

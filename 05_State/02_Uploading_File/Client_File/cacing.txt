@@ -1,0 +1,10 @@
+JKS=Foreign("^JKSE","C");
+C_ = C/JKS; // setting benchmark » C_ normalisasi Agri (asumsi Agricultural) terhadap ^JKSE dan asumsi mau buat AAA Chart 
+Xpos1 = MA(C_,10); 
+Xpos2 = MA(C_,30);
+AgregasiSumbuX = ((XPos1-XPos2)/Xpos2); » penambahan pembagi XPos2
+AgregasiSumbuY = MA(AgregasiSumbuX,9);
+
+Namun perhatikan bergantung pada datafeed kita,
+kalau HGU untuk IHSG dinamakan ^JKSE, 
+may be kalau data QISn dinamakan IHSG

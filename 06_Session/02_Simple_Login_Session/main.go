@@ -30,7 +30,7 @@ type session struct {
 var tpl *template.Template
 var dbUsers = map[string]user{}       // user ID, user
 var dbSessions = map[string]session{} // session ID, user ID
-var dbSessionsCleaned time.Time       //last time cleaned (for go routine)
+// var dbSessionsCleaned time.Time       //last time cleaned (for go routine)
 
 const sessionLeght = 600 //max age int second
 

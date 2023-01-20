@@ -69,5 +69,5 @@ func cleanSomeSession() {
 			delete(dbSessions, k)
 		}
 	}
-	dbSessionsCleaned = time.Now()
+	// dbSessionsCleaned = time.Now()
 }

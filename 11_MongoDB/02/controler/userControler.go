@@ -95,8 +95,6 @@ func (uc UserControler) CreateUser(w http.ResponseWriter, r *http.Request, p htt
 
 func (uc UserControler) DeleteUser(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
 	id := p.ByName("id")
-	fmt.Println(id)
-	fmt.Println(123123123123123)
 	if id == "" {
 		return
 	}
